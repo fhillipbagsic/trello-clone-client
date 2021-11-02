@@ -38,8 +38,8 @@ const Filter = forwardRef((props, ref) => {
       </div>
       <p className="font-medium text-gray-600 pt-3">Tags</p>
       <div className="flex space-x-2">
-        {boardTitles.map((boardTitle) => (
-          <Tag color={boardTitle.color} />
+        {boardTitles.map((boardTitle, index) => (
+          <Tag key={index} color={boardTitle.color} />
         ))}
       </div>
       <div className="w-full h-0.5 bg-gray-100" />

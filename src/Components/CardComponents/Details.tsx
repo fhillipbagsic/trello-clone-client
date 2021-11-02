@@ -18,7 +18,6 @@ const Details = forwardRef((card: iCard, ref) => {
   }));
 
   const handlePointerEnter = () => {
-    console.log("focus");
     document.body.classList.add("overflow-hidden");
   };
 

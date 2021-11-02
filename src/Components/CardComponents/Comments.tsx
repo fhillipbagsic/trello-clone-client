@@ -7,16 +7,15 @@ interface iProps {
 }
 
 const Comments = ({ comments }: iProps) => {
-  console.log(comments);
   return (
     <>
       <div className="flex space-x-3 items-center">
         <ChatIcon className="w-6" />
         <p className="text-lg font-medium">Comments</p>
       </div>
-      {comments?.map((comment) => {
+      {comments?.map((comment, index) => {
         return (
-          <article className="flex items-start space-x-2">
+          <article key={index} className="flex items-start space-x-2">
             <img
               src={comment.image}
               alt={comment.name}
