@@ -8,12 +8,12 @@ const Tags = ({ tags }: iProps) => {
   return (
     <div className="flex space-x-2">
       {tags.map((tag, index) => {
-        const colorType = tag + "-500";
+        const colorType = "bg-" + tag + "-500";
 
         return (
           <span
             key={index}
-            className={`h-2 w-24 bg-${colorType} rounded-md`}
+            className={`h-2 w-24 ${colorType} rounded-md`}
           ></span>
         );
       })}
