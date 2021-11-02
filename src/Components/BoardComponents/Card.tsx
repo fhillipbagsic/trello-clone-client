@@ -34,6 +34,7 @@ const Card = (card: iCard) => {
   const handleClick = () => {
     detailsRef.current?.openDetails();
   };
+  console.log(card.tags);
   return (
     <>
       <article

@@ -6,7 +6,6 @@ interface iProps {
 }
 
 const BoardTitle = ({ board }: iProps) => {
-  console.log(board.color);
   return (
     <div
       className={`flex items-center justify-between px-3 py-2 bg-${"gray"}-100 rounded-lg`}
