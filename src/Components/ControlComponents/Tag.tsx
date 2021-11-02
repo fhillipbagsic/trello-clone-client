@@ -1,4 +1,5 @@
 import { useState } from "react";
+import getColor from "../../util/getColor";
 
 interface iProps {
   color: string;
@@ -12,7 +13,7 @@ const Tag = ({ color }: iProps) => {
 
   return (
     <span
-      className={`w-9 h-9 bg-${color}-500 rounded-full cursor-pointer ${
+      className={`w-9 h-9 ${getColor(color)} rounded-full cursor-pointer ${
         selected && "border-solid border-4 border-gray-300"
       } transition-all`}
       onClick={handleSelect}

@@ -1,4 +1,5 @@
 import { Tags as iTags } from "../../util/boardInterface";
+import getColor from "../../util/getColor";
 
 interface iProps {
   tags: iTags;
@@ -10,7 +11,7 @@ const Tags = ({ tags }: iProps) => {
       {tags.map((tag, index) => (
         <span
           key={index}
-          className={`h-2 w-16 bg-${tag}-500 rounded-md`}
+          className={`h-2 w-16 ${getColor(tag)} rounded-md`}
         ></span>
       ))}
     </div>

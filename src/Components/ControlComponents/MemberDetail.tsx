@@ -22,10 +22,7 @@ const MemberDetail = forwardRef((props, ref) => {
     setToggle(false);
   };
   return toggle ? (
-    <div
-      className="absolute flex items-start justify-between space-x-3 bg-white rounded-md shadow-md right-0 top-0 w-max p-3 border-2 border-gray-100 border-solid "
-      // onMouseLeave={handleClose}
-    >
+    <div className="absolute flex items-start justify-between space-x-3 bg-white rounded-md shadow-md right-0 top-0 w-max p-3 border-2 border-gray-100 border-solid ">
       <img
         src={details?.image}
         alt=""
@@ -35,9 +32,9 @@ const MemberDetail = forwardRef((props, ref) => {
         <div>
           <p className="font-medium">{details.name}</p>
           <p className="text-sm text-gray-600">{details.email}</p>
-          <MailIcon className="w-5 text-gray-400 inline mr-2 mt-1 cursor-pointer" />
-          <PhoneIcon className="w-5 text-gray-400 inline mr-2 mt-1 cursor-pointer" />
-          <BadgeCheckIcon className="w-5 text-gray-400 inline mr-2 mt-1 cursor-pointer" />
+          <MailIcon className="w-5 text-blue-500 inline mr-2 mt-1 cursor-pointer" />
+          <PhoneIcon className="w-5 text-gray-500 inline mr-2 mt-1 cursor-pointer" />
+          <BadgeCheckIcon className="w-5 text-green-500 inline mr-2 mt-1 cursor-pointer" />
         </div>
       )}
       <XIcon
