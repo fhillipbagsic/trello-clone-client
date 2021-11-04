@@ -33,7 +33,7 @@ const MemberDetail = forwardRef((props, ref) => {
           <p className="font-medium">{details.name}</p>
           <p className="text-sm text-gray-600">{details.email}</p>
           <MailIcon className="w-5 text-blue-500 inline mr-2 mt-1 cursor-pointer" />
-          <PhoneIcon className="w-5 text-gray-500 inline mr-2 mt-1 cursor-pointer" />
+          <PhoneIcon className="w-5 text-yellow-500 inline mr-2 mt-1 cursor-pointer" />
           <BadgeCheckIcon className="w-5 text-green-500 inline mr-2 mt-1 cursor-pointer" />
         </div>
       )}

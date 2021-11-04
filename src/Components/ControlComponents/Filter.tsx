@@ -5,9 +5,13 @@ import BoardItem from "./BoardItem";
 import KeywordSearch from "./KeywordSearch";
 import Tag from "./Tag";
 
+interface iFilter {
+  
+}
+
 const Filter = forwardRef((props, ref) => {
   const [toggle, setToggle] = useState(false);
-  const boards = useAppSelector((state) => state.boards.value);
+  const boards = useAppSelector((state) => state.boards.filteredValue);
   const boardTitles = boards.map((board) => board.board);
 
   useImperativeHandle(ref, () => ({
@@ -21,7 +25,7 @@ const Filter = forwardRef((props, ref) => {
   };
 
   return toggle ? (
-    <div className="fixed right-0 top-100 flex flex-col space-y-2 p-3  w-1/4 bg-white border-2 border-solid border-gray-100 rounded-md shadow-md">
+    <div className="fixed right-0 top-100 flex flex-col space-y-2 p-3 min-w-max max-w-sm  bg-white border-2 border-solid border-gray-100 rounded-md shadow-md">
       <p className="font-medium text-gray-600 text-center">Filters</p>
       <div className="w-full h-0.5 bg-gray-100" />
       <p className="font-medium text-gray-600">Boards</p>

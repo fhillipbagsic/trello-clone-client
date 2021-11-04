@@ -235,11 +235,14 @@ const boardSlice = createSlice({
   name: "boards",
   initialState: {
     value: initialStateValue,
-    selectedValue: initialStateValue[0],
+    filteredValue: initialStateValue,
   },
   reducers: {
     setBoards: (state, action) => {
       state.value = action.payload;
+    },
+    setFilteredBoards: (state, action) => {
+      state.filteredValue = action.payload;
     },
   },
 });
