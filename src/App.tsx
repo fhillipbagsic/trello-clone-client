@@ -4,12 +4,15 @@ import NavBar from "./Components/NavBar";
 import Signin from "./Components/SigninComponents/Signin";
 
 function App() {
+  const alreadySignedIn = localStorage.getItem("name") || null;
+
+  console.log(alreadySignedIn);
   return (
     <>
       <NavBar />
       <Controls />
       <Container />
-      <Signin />
+      {!alreadySignedIn && <Signin />}
     </>
   );
 }

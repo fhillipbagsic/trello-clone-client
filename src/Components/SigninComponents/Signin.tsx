@@ -9,14 +9,16 @@ const Signin = () => {
   const handleClose = (event: React.MouseEvent<HTMLElement>) => {
     const element = event.target as HTMLElement;
 
-    if (!element.classList.contains("modal")) return;
+    if (!element.classList.contains("guest-button")) return;
+
+    localStorage.setItem("name", "guest");
 
     setToggle(false);
   };
 
   return toggle ? (
     <div
-      className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75 modal"
+      className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75"
       onClick={handleClose}
     >
       <div
@@ -30,7 +32,7 @@ const Signin = () => {
         <p className="text-xl font-medium text-center mb-5">
           Before we continue, may I know your name?
         </p>
-        <Input />
+        <Input setToggle={setToggle} />
         <button
           className="font-medium mb-16 guest-button"
           onClick={() => setToggle(false)}
